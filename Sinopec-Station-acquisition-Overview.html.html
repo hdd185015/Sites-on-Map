@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d8526bb9717b51530ba22679cd5d71c8 {
+                #map_1baf376c8c415eb17167c613c13cad3d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -67,18 +67,50 @@
                         }
                     </style>
             
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_d8526bb9717b51530ba22679cd5d71c8" ></div>
+            <div class="folium-map" id="map_1baf376c8c415eb17167c613c13cad3d" ></div>
         
 </body>
 <script>
     
     
-            var map_d8526bb9717b51530ba22679cd5d71c8 = L.map(
-                "map_d8526bb9717b51530ba22679cd5d71c8",
+            var map_1baf376c8c415eb17167c613c13cad3d = L.map(
+                "map_1baf376c8c415eb17167c613c13cad3d",
                 {
                     center: [-32.8182179958423, 148.017940353909],
                     crs: L.CRS.EPSG3857,
@@ -87,83 +119,83 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_d8526bb9717b51530ba22679cd5d71c8);
+            L.control.scale().addTo(map_1baf376c8c415eb17167c613c13cad3d);
 
             
 
         
     
-            var tile_layer_896969228bc03a9e6327f46d4d14dc04 = L.tileLayer(
+            var tile_layer_6941fb23941af38407d6e0bdfe5dc9a0 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_d8526bb9717b51530ba22679cd5d71c8);
+            ).addTo(map_1baf376c8c415eb17167c613c13cad3d);
         
     
-            map_d8526bb9717b51530ba22679cd5d71c8.fitBounds(
+            map_1baf376c8c415eb17167c613c13cad3d.fitBounds(
                 [[-38.0159706667666, 143.246231377135], [-27.620465324918, 152.789649330683]],
                 {}
             );
         
     
-        function geo_json_06376042ed30a3b0d25e7302d46fa290_styler(feature) {
+        function geo_json_bb72fb2450c015b03e62e46422d9ec12_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.5, "weight": 2};
             }
         }
-        function geo_json_06376042ed30a3b0d25e7302d46fa290_highlighter(feature) {
+        function geo_json_bb72fb2450c015b03e62e46422d9ec12_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.75};
             }
         }
-        function geo_json_06376042ed30a3b0d25e7302d46fa290_pointToLayer(feature, latlng) {
+        function geo_json_bb72fb2450c015b03e62e46422d9ec12_pointToLayer(feature, latlng) {
             var opts = {"fill": true, "radius": 6};
             
-            let style = geo_json_06376042ed30a3b0d25e7302d46fa290_styler(feature)
+            let style = geo_json_bb72fb2450c015b03e62e46422d9ec12_styler(feature)
             Object.assign(opts, style)
             
             return new L.Marker(latlng, opts)
         }
 
-        function geo_json_06376042ed30a3b0d25e7302d46fa290_onEachFeature(feature, layer) {
+        function geo_json_bb72fb2450c015b03e62e46422d9ec12_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_06376042ed30a3b0d25e7302d46fa290.resetStyle(e.target);
+                        geo_json_bb72fb2450c015b03e62e46422d9ec12.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_06376042ed30a3b0d25e7302d46fa290_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_bb72fb2450c015b03e62e46422d9ec12_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
             });
         };
-        var geo_json_06376042ed30a3b0d25e7302d46fa290 = L.geoJson(null, {
-                onEachFeature: geo_json_06376042ed30a3b0d25e7302d46fa290_onEachFeature,
+        var geo_json_bb72fb2450c015b03e62e46422d9ec12 = L.geoJson(null, {
+                onEachFeature: geo_json_bb72fb2450c015b03e62e46422d9ec12_onEachFeature,
             
-                style: geo_json_06376042ed30a3b0d25e7302d46fa290_styler,
-                pointToLayer: geo_json_06376042ed30a3b0d25e7302d46fa290_pointToLayer
+                style: geo_json_bb72fb2450c015b03e62e46422d9ec12_styler,
+                pointToLayer: geo_json_bb72fb2450c015b03e62e46422d9ec12_pointToLayer
         });
 
-        function geo_json_06376042ed30a3b0d25e7302d46fa290_add (data) {
-            geo_json_06376042ed30a3b0d25e7302d46fa290
+        function geo_json_bb72fb2450c015b03e62e46422d9ec12_add (data) {
+            geo_json_bb72fb2450c015b03e62e46422d9ec12
                 .addData(data)
-                .addTo(map_d8526bb9717b51530ba22679cd5d71c8);
+                .addTo(map_1baf376c8c415eb17167c613c13cad3d);
         }
-            geo_json_06376042ed30a3b0d25e7302d46fa290_add({"bbox": [143.246231377135, -38.0159706667666, 152.789649330683, -27.620465324918], "features": [{"bbox": [144.865017419801, -37.7313640953024, 144.865017419801, -37.7313640953024], "geometry": {"coordinates": [144.865017419801, -37.7313640953024], "type": "Point"}, "id": "0", "properties": {"FUTURE DEVELOPMENTS": "RED ROOSTER/GYG WILL COME ALONG WITH SERVO", "Latitude": -37.7313640953024, "Longitude": 144.865017419801, "RENT PER ANNUM": "$380,000 PLUS GST FOR\nPETROL STATION AREA\nGYG/RED ROOSTER\nRENT IS SEPARATE RENT", "SITE STATUS": "WILL BE READY BY MAY 2024", "Status": "In Progress", "Store Address": "39 MILLIERA RD,KEILOR EAST,VIC", "Store Location": "KEILOR EAST", "TOTAL VOLUME PER ANNUM": "5 MILLION", "Total Tank Capacities on Site": 50000.0}, "type": "Feature"}, {"bbox": [144.894596119756, -37.8490820780479, 144.894596119756, -37.8490820780479], "geometry": {"coordinates": [144.894596119756, -37.8490820780479], "type": "Point"}, "id": "1", "properties": {"FUTURE DEVELOPMENTS": "CANOPY HAS TO BUILT AND\nSHOPFITOUT HAS TO BE DONE", "Latitude": -37.8490820780479, "Longitude": 144.894596119756, "RENT PER ANNUM": "$370,000 PLUS GST", "SITE STATUS": "WILL BE READY BY 1 ST APR 2024", "Status": "In Progress", "Store Address": "193-195 DOUGLAS PARADE,NEWPORT,VIC", "Store Location": "NEWPORT SITE", "TOTAL VOLUME PER ANNUM": "4 MILLION", "Total Tank Capacities on Site": 61000.0}, "type": "Feature"}, {"bbox": [144.848106812076, -37.8266377357254, 144.848106812076, -37.8266377357254], "geometry": {"coordinates": [144.848106812076, -37.8266377357254], "type": "Point"}, "id": "2", "properties": {"FUTURE DEVELOPMENTS": "NEED TO SPEND AROUND $700\nK TO GET OUT OF EG GROUP", "Latitude": -37.8266377357254, "Longitude": 144.848106812076, "RENT PER ANNUM": "$380,000 PLUS GST FOR\nPETROL STATION AREA\nONLY", "SITE STATUS": "WILL BE READY BY 1ST JULY 2024", "Status": "In Progress", "Store Address": "2 LANGSHAW ST,ALTONA North\uff0c VIC", "Store Location": "EG ALTONA NORTH SITE", "TOTAL VOLUME PER ANNUM": "7 MILLION", "Total Tank Capacities on Site": 130000.0}, "type": "Feature"}, {"bbox": [145.109530850654, -38.0159706667666, 145.109530850654, -38.0159706667666], "geometry": {"coordinates": [145.109530850654, -38.0159706667666], "type": "Point"}, "id": "3", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -38.0159706667666, "Longitude": 145.109530850654, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "2-4 Langslow rd, Aspendale Gardens vic", "Store Location": "BP Aspendale Gardens", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.137914539067, -37.900734654761, 145.137914539067, -37.900734654761], "geometry": {"coordinates": [145.137914539067, -37.900734654761], "type": "Point"}, "id": "4", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -37.900734654761, "Longitude": 145.137914539067, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "350 Ferntree Gully Rd, Notting Hill VIC 3168", "Store Location": "United Notting Hill", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.881234761367, -33.927294095998, 150.881234761367, -33.927294095998], "geometry": {"coordinates": [150.881234761367, -33.927294095998], "type": "Point"}, "id": "5", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -33.927294095998, "Longitude": 150.881234761367, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "358 Hoxton Park Rd, Prestons NSW 2170", "Store Location": "Budget Petrol PRESTONS", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.994934715341, -33.8969560980641, 150.994934715341, -33.8969560980641], "geometry": {"coordinates": [150.994934715341, -33.8969560980641], "type": "Point"}, "id": "6", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -33.8969560980641, "Longitude": 150.994934715341, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "924-928 Hume Hwy, Bass Hill NSW 2197", "Store Location": "PAG Petroleum", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.789649330683, -27.620465324918, 152.789649330683, -27.620465324918], "geometry": {"coordinates": [152.789649330683, -27.620465324918], "type": "Point"}, "id": "7", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -27.620465324918, "Longitude": 152.789649330683, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "134 Blackstone Rd, Silkstone QLD 4304", "Store Location": "METCO SILKSTONE", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.136604122717, -37.9586990562487, 145.136604122717, -37.9586990562487], "geometry": {"coordinates": [145.136604122717, -37.9586990562487], "type": "Point"}, "id": "8", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -37.9586990562487, "Longitude": 145.136604122717, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "727-729 Heatherton Rd, Clayton South VIC 3169", "Store Location": "BP Clayton South", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [146.004613355123, -35.9891937090484, 146.004613355123, -35.9891937090484], "geometry": {"coordinates": [146.004613355123, -35.9891937090484], "type": "Point"}, "id": "9", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -35.9891937090484, "Longitude": 146.004613355123, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "91 Melbourne St, Mulwala NSW 2647", "Store Location": "Permit for Petrol Station And Convenience Store", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.73040640656, -36.83834125562, 143.73040640656, -36.83834125562], "geometry": {"coordinates": [143.73040640656, -36.83834125562], "type": "Point"}, "id": "10", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -36.83834125562, "Longitude": 143.73040640656, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "45 Broadway, Dunolly VIC 3472", "Store Location": "Petrol Station", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.246231377135, -36.6093310236298, 143.246231377135, -36.6093310236298], "geometry": {"coordinates": [143.246231377135, -36.6093310236298], "type": "Point"}, "id": "11", "properties": {"FUTURE DEVELOPMENTS": null, "Latitude": -36.6093310236298, "Longitude": 143.246231377135, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": null, "Store Address": "45 N Western Rd, St Arnaud VIC 3478", "Store Location": "Sunraysia Highway", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_bb72fb2450c015b03e62e46422d9ec12_add({"bbox": [143.246231377135, -38.0159706667666, 152.789649330683, -27.620465324918], "features": [{"bbox": [144.865017419801, -37.7313640953024, 144.865017419801, -37.7313640953024], "geometry": {"coordinates": [144.865017419801, -37.7313640953024], "type": "Point"}, "id": "0", "properties": {"FUTURE DEVELOPMENTS": "RED ROOSTER/GYG WILL COME ALONG WITH SERVO", "RENT PER ANNUM": "$380,000 PLUS GST FOR\nPETROL STATION AREA\nGYG/RED ROOSTER\nRENT IS SEPARATE RENT", "SITE STATUS": "WILL BE READY BY MAY 2024", "Status": "In Progress", "Store Address": "39 MILLIERA RD,KEILOR EAST,VIC", "Store Location": "KEILOR EAST", "TOTAL VOLUME PER ANNUM": "5 MILLION", "Total Tank Capacities on Site": 50000.0}, "type": "Feature"}, {"bbox": [144.894596119756, -37.8490820780479, 144.894596119756, -37.8490820780479], "geometry": {"coordinates": [144.894596119756, -37.8490820780479], "type": "Point"}, "id": "1", "properties": {"FUTURE DEVELOPMENTS": "CANOPY HAS TO BUILT AND\nSHOPFITOUT HAS TO BE DONE", "RENT PER ANNUM": "$370,000 PLUS GST", "SITE STATUS": "WILL BE READY BY 1 ST APR 2024", "Status": "In Progress", "Store Address": "193-195 DOUGLAS PARADE,NEWPORT,VIC", "Store Location": "NEWPORT SITE", "TOTAL VOLUME PER ANNUM": "4 MILLION", "Total Tank Capacities on Site": 61000.0}, "type": "Feature"}, {"bbox": [144.848106812076, -37.8266377357254, 144.848106812076, -37.8266377357254], "geometry": {"coordinates": [144.848106812076, -37.8266377357254], "type": "Point"}, "id": "2", "properties": {"FUTURE DEVELOPMENTS": "NEED TO SPEND AROUND $700\nK TO GET OUT OF EG GROUP", "RENT PER ANNUM": "$380,000 PLUS GST FOR\nPETROL STATION AREA\nONLY", "SITE STATUS": "WILL BE READY BY 1ST JULY 2024", "Status": "In Progress", "Store Address": "2 LANGSHAW ST,ALTONA North\uff0c VIC", "Store Location": "EG ALTONA NORTH SITE", "TOTAL VOLUME PER ANNUM": "7 MILLION", "Total Tank Capacities on Site": 130000.0}, "type": "Feature"}, {"bbox": [145.109530850654, -38.0159706667666, 145.109530850654, -38.0159706667666], "geometry": {"coordinates": [145.109530850654, -38.0159706667666], "type": "Point"}, "id": "3", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "2-4 Langslow rd, Aspendale Gardens vic", "Store Location": "BP Aspendale Gardens", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.994934715341, -33.8969560980641, 150.994934715341, -33.8969560980641], "geometry": {"coordinates": [150.994934715341, -33.8969560980641], "type": "Point"}, "id": "6", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "924-928 Hume Hwy, Bass Hill NSW 2197", "Store Location": "PAG Petroleum", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.789649330683, -27.620465324918, 152.789649330683, -27.620465324918], "geometry": {"coordinates": [152.789649330683, -27.620465324918], "type": "Point"}, "id": "7", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "134 Blackstone Rd, Silkstone QLD 4304", "Store Location": "METCO SILKSTONE", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.136604122717, -37.9586990562487, 145.136604122717, -37.9586990562487], "geometry": {"coordinates": [145.136604122717, -37.9586990562487], "type": "Point"}, "id": "8", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "727-729 Heatherton Rd, Clayton South VIC 3169", "Store Location": "BP Clayton South", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [146.004613355123, -35.9891937090484, 146.004613355123, -35.9891937090484], "geometry": {"coordinates": [146.004613355123, -35.9891937090484], "type": "Point"}, "id": "9", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "91 Melbourne St, Mulwala NSW 2647", "Store Location": "Permit for Petrol Station And Convenience Store", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.73040640656, -36.83834125562, 143.73040640656, -36.83834125562], "geometry": {"coordinates": [143.73040640656, -36.83834125562], "type": "Point"}, "id": "10", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "45 Broadway, Dunolly VIC 3472", "Store Location": "Petrol Station", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.246231377135, -36.6093310236298, 143.246231377135, -36.6093310236298], "geometry": {"coordinates": [143.246231377135, -36.6093310236298], "type": "Point"}, "id": "11", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "In Progress", "Store Address": "45 N Western Rd, St Arnaud VIC 3478", "Store Location": "Sunraysia Highway", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_06376042ed30a3b0d25e7302d46fa290.bindTooltip(
+    geo_json_bb72fb2450c015b03e62e46422d9ec12.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
     let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
-    let fields = ["Store Address"];
-    let aliases = ["Store Address"];
+    let fields = ["Store Location"];
+    let aliases = ["Store Location"];
     let table = '<table>' +
         String(
         fields.map(
@@ -179,13 +211,13 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-    geo_json_06376042ed30a3b0d25e7302d46fa290.bindPopup(
+    geo_json_bb72fb2450c015b03e62e46422d9ec12.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
     let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
-    let fields = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "Latitude", "Longitude", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
-    let aliases = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "Latitude", "Longitude", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
+    let fields = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
+    let aliases = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
     let table = '<table>' +
         String(
         fields.map(
@@ -202,5 +234,127 @@
     }
     ,{"className": "foliumpopup"});
                      
+    
+        function geo_json_61f72db4e09392e86e54979e3aa67849_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_61f72db4e09392e86e54979e3aa67849_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_61f72db4e09392e86e54979e3aa67849_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 350, "stroke": true, "weight": 3};
+            
+            let style = geo_json_61f72db4e09392e86e54979e3aa67849_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.circle(latlng, opts)
+        }
+
+        function geo_json_61f72db4e09392e86e54979e3aa67849_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_61f72db4e09392e86e54979e3aa67849.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_61f72db4e09392e86e54979e3aa67849_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_61f72db4e09392e86e54979e3aa67849 = L.geoJson(null, {
+                onEachFeature: geo_json_61f72db4e09392e86e54979e3aa67849_onEachFeature,
+            
+                style: geo_json_61f72db4e09392e86e54979e3aa67849_styler,
+                pointToLayer: geo_json_61f72db4e09392e86e54979e3aa67849_pointToLayer
+        });
+
+        function geo_json_61f72db4e09392e86e54979e3aa67849_add (data) {
+            geo_json_61f72db4e09392e86e54979e3aa67849
+                .addData(data)
+                .addTo(map_1baf376c8c415eb17167c613c13cad3d);
+        }
+            geo_json_61f72db4e09392e86e54979e3aa67849_add({"bbox": [145.137914539067, -37.900734654761, 150.881234761367, -33.927294095998], "features": [{"bbox": [145.137914539067, -37.900734654761, 145.137914539067, -37.900734654761], "geometry": {"coordinates": [145.137914539067, -37.900734654761], "type": "Point"}, "id": "4", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "Discard", "Store Address": "350 Ferntree Gully Rd, Notting Hill VIC 3168", "Store Location": "United Notting Hill", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null, "__folium_color": "red"}, "type": "Feature"}, {"bbox": [150.881234761367, -33.927294095998, 150.881234761367, -33.927294095998], "geometry": {"coordinates": [150.881234761367, -33.927294095998], "type": "Point"}, "id": "5", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Status": "Discard", "Store Address": "358 Hoxton Park Rd, Prestons NSW 2170", "Store Location": "Budget Petrol PRESTONS", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null, "__folium_color": "red"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_61f72db4e09392e86e54979e3aa67849.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location"];
+    let aliases = ["Store Location"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_61f72db4e09392e86e54979e3aa67849.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
+    let aliases = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            var tile_layer_16fd845eb9fb1ed766dd5d6642061610 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1baf376c8c415eb17167c613c13cad3d);
+        
+    
+            var layer_control_5ad535e27a04b92affaa37a5cf286515 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6941fb23941af38407d6e0bdfe5dc9a0,
+                    "cartodbpositron" : tile_layer_16fd845eb9fb1ed766dd5d6642061610,
+                },
+                overlays :  {
+                    "In Progress" : geo_json_bb72fb2450c015b03e62e46422d9ec12,
+                    "Discard" : geo_json_61f72db4e09392e86e54979e3aa67849,
+                },
+            };
+            L.control.layers(
+                layer_control_5ad535e27a04b92affaa37a5cf286515.base_layers,
+                layer_control_5ad535e27a04b92affaa37a5cf286515.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_1baf376c8c415eb17167c613c13cad3d);
+            tile_layer_16fd845eb9fb1ed766dd5d6642061610.remove();
+        
 </script>
 </html>
