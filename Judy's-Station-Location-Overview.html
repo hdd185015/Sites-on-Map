@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f3b368b19473e0eff93da29820463f72 {
+                #map_b810dbc14509307f3e755b2b45943a62 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -71,14 +71,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_f3b368b19473e0eff93da29820463f72" ></div>
+            <div class="folium-map" id="map_b810dbc14509307f3e755b2b45943a62" ></div>
         
 </body>
 <script>
     
     
-            var map_f3b368b19473e0eff93da29820463f72 = L.map(
-                "map_f3b368b19473e0eff93da29820463f72",
+            var map_b810dbc14509307f3e755b2b45943a62 = L.map(
+                "map_b810dbc14509307f3e755b2b45943a62",
                 {
                     center: [-36.06240884778215, 143.8909885542795],
                     crs: L.CRS.EPSG3857,
@@ -87,77 +87,77 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_f3b368b19473e0eff93da29820463f72);
+            L.control.scale().addTo(map_b810dbc14509307f3e755b2b45943a62);
 
             
 
         
     
-            var tile_layer_bea78dc0f9398db0243fac6aa1696a1c = L.tileLayer(
+            var tile_layer_f29bb6fafb47cdbf5a29e1aa3dadc41d = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_f3b368b19473e0eff93da29820463f72);
+            ).addTo(map_b810dbc14509307f3e755b2b45943a62);
         
     
-            map_f3b368b19473e0eff93da29820463f72.fitBounds(
+            map_b810dbc14509307f3e755b2b45943a62.fitBounds(
                 [[-37.9557957903525, 142.078827068636], [-34.1690219052118, 145.703150039923]],
                 {}
             );
         
     
-        function geo_json_8522ef62774643dab33ffbe4eb52cdef_styler(feature) {
+        function geo_json_df2e19cf34f16c8072882d3d1cc86d61_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.5, "weight": 2};
             }
         }
-        function geo_json_8522ef62774643dab33ffbe4eb52cdef_highlighter(feature) {
+        function geo_json_df2e19cf34f16c8072882d3d1cc86d61_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.75};
             }
         }
-        function geo_json_8522ef62774643dab33ffbe4eb52cdef_pointToLayer(feature, latlng) {
+        function geo_json_df2e19cf34f16c8072882d3d1cc86d61_pointToLayer(feature, latlng) {
             var opts = {"fill": true, "radius": 6};
             
-            let style = geo_json_8522ef62774643dab33ffbe4eb52cdef_styler(feature)
+            let style = geo_json_df2e19cf34f16c8072882d3d1cc86d61_styler(feature)
             Object.assign(opts, style)
             
             return new L.Marker(latlng, opts)
         }
 
-        function geo_json_8522ef62774643dab33ffbe4eb52cdef_onEachFeature(feature, layer) {
+        function geo_json_df2e19cf34f16c8072882d3d1cc86d61_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_8522ef62774643dab33ffbe4eb52cdef.resetStyle(e.target);
+                        geo_json_df2e19cf34f16c8072882d3d1cc86d61.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_8522ef62774643dab33ffbe4eb52cdef_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_df2e19cf34f16c8072882d3d1cc86d61_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
             });
         };
-        var geo_json_8522ef62774643dab33ffbe4eb52cdef = L.geoJson(null, {
-                onEachFeature: geo_json_8522ef62774643dab33ffbe4eb52cdef_onEachFeature,
+        var geo_json_df2e19cf34f16c8072882d3d1cc86d61 = L.geoJson(null, {
+                onEachFeature: geo_json_df2e19cf34f16c8072882d3d1cc86d61_onEachFeature,
             
-                style: geo_json_8522ef62774643dab33ffbe4eb52cdef_styler,
-                pointToLayer: geo_json_8522ef62774643dab33ffbe4eb52cdef_pointToLayer
+                style: geo_json_df2e19cf34f16c8072882d3d1cc86d61_styler,
+                pointToLayer: geo_json_df2e19cf34f16c8072882d3d1cc86d61_pointToLayer
         });
 
-        function geo_json_8522ef62774643dab33ffbe4eb52cdef_add (data) {
-            geo_json_8522ef62774643dab33ffbe4eb52cdef
+        function geo_json_df2e19cf34f16c8072882d3d1cc86d61_add (data) {
+            geo_json_df2e19cf34f16c8072882d3d1cc86d61
                 .addData(data)
-                .addTo(map_f3b368b19473e0eff93da29820463f72);
+                .addTo(map_b810dbc14509307f3e755b2b45943a62);
         }
-            geo_json_8522ef62774643dab33ffbe4eb52cdef_add({"bbox": [142.078827068636, -37.9557957903525, 145.703150039923, -34.1690219052118], "features": [{"bbox": [142.078827068636, -34.1690219052118, 142.078827068636, -34.1690219052118], "geometry": {"coordinates": [142.078827068636, -34.1690219052118], "type": "Point"}, "id": "25", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "1 River Ave, Merbein VIC 3505", "Store Location": "Merbein", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.855286025462, -35.5121830095915, 142.855286025462, -35.5121830095915], "geometry": {"coordinates": [142.855286025462, -35.5121830095915], "type": "Point"}, "id": "26", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "95 RAILWAY AVENUE, SEALAKE, VIC. 3533", "Store Location": "SeaLake", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.431035225756, -36.2387897637319, 145.431035225756, -36.2387897637319], "geometry": {"coordinates": [145.431035225756, -36.2387897637319], "type": "Point"}, "id": "27", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "1651 Goulburn Valley Hwy, Tallygaroopna VIC 3634", "Store Location": "Tallygaroopna", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.27959553919, -34.7614340629276, 142.27959553919, -34.7614340629276], "geometry": {"coordinates": [142.27959553919, -34.7614340629276], "type": "Point"}, "id": "28", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "3478 Calder Hwy, Hattah VIC 3501", "Store Location": "Hattah", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.547482068145, -37.6362022288935, 142.547482068145, -37.6362022288935], "geometry": {"coordinates": [142.547482068145, -37.6362022288935], "type": "Point"}, "id": "29", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "24-26 Memorial Rd, Glenthompson VIC 3293", "Store Location": "Glenthompson", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.225799451095, -37.0701600299877, 144.225799451095, -37.0701600299877], "geometry": {"coordinates": [144.225799451095, -37.0701600299877], "type": "Point"}, "id": "30", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "In Progress", "Store Address": "30-32 Duke St, Castlemaine VIC 3450", "Store Location": "Catlemaine", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.226141480704, -35.7478268493142, 144.226141480704, -35.7478268493142], "geometry": {"coordinates": [144.226141480704, -35.7478268493142], "type": "Point"}, "id": "31", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "38 western Road, Cohuna Vic 3568", "Store Location": "Cohuna", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.703150039923, -37.4291628360124, 145.703150039923, -37.4291628360124], "geometry": {"coordinates": [145.703150039923, -37.4291628360124], "type": "Point"}, "id": "32", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Existing Shell", "Source": "Judy", "Status": "Future Ready", "Store Address": "2093 Maroondah Hwy, Buxton VIC 3711", "Store Location": "Buxton", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.974555511047, -36.4136297551088, 143.974555511047, -36.4136297551088], "geometry": {"coordinates": [143.974555511047, -36.4136297551088], "type": "Point"}, "id": "33", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "15 Peppercorn Way, Serpentine VIC 3517", "Store Location": "Serpentine", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.038511808698, -37.9557957903525, 145.038511808698, -37.9557957903525], "geometry": {"coordinates": [145.038511808698, -37.9557957903525], "type": "Point"}, "id": "45", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Reviewing", "Store Address": "300 Bay Rd, Cheltenham VIC 3192", "Store Location": "Bayroad", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_df2e19cf34f16c8072882d3d1cc86d61_add({"bbox": [142.078827068636, -37.9557957903525, 145.703150039923, -34.1690219052118], "features": [{"bbox": [142.078827068636, -34.1690219052118, 142.078827068636, -34.1690219052118], "geometry": {"coordinates": [142.078827068636, -34.1690219052118], "type": "Point"}, "id": "25", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "1 River Ave, Merbein VIC 3505", "Store Location": "Merbein", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.855286025462, -35.5121830095915, 142.855286025462, -35.5121830095915], "geometry": {"coordinates": [142.855286025462, -35.5121830095915], "type": "Point"}, "id": "26", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "95 RAILWAY AVENUE, SEALAKE, VIC. 3533", "Store Location": "SeaLake", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.431035225756, -36.2387897637319, 145.431035225756, -36.2387897637319], "geometry": {"coordinates": [145.431035225756, -36.2387897637319], "type": "Point"}, "id": "27", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "1651 Goulburn Valley Hwy, Tallygaroopna VIC 3634", "Store Location": "Tallygaroopna", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.27959553919, -34.7614340629276, 142.27959553919, -34.7614340629276], "geometry": {"coordinates": [142.27959553919, -34.7614340629276], "type": "Point"}, "id": "28", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "3478 Calder Hwy, Hattah VIC 3501", "Store Location": "Hattah", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [142.547482068145, -37.6362022288935, 142.547482068145, -37.6362022288935], "geometry": {"coordinates": [142.547482068145, -37.6362022288935], "type": "Point"}, "id": "29", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "24-26 Memorial Rd, Glenthompson VIC 3293", "Store Location": "Glenthompson", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.225799451095, -37.0701600299877, 144.225799451095, -37.0701600299877], "geometry": {"coordinates": [144.225799451095, -37.0701600299877], "type": "Point"}, "id": "30", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "30-32 Duke St, Castlemaine VIC 3450", "Store Location": "Catlemaine", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.226141480704, -35.7478268493142, 144.226141480704, -35.7478268493142], "geometry": {"coordinates": [144.226141480704, -35.7478268493142], "type": "Point"}, "id": "31", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "38 western Road, Cohuna Vic 3568", "Store Location": "Cohuna", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.703150039923, -37.4291628360124, 145.703150039923, -37.4291628360124], "geometry": {"coordinates": [145.703150039923, -37.4291628360124], "type": "Point"}, "id": "32", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Existing Shell", "Source": "Judy", "Status": "Future Ready", "Store Address": "2093 Maroondah Hwy, Buxton VIC 3711", "Store Location": "Buxton", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.974555511047, -36.4136297551088, 143.974555511047, -36.4136297551088], "geometry": {"coordinates": [143.974555511047, -36.4136297551088], "type": "Point"}, "id": "33", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Future Ready", "Store Address": "15 Peppercorn Way, Serpentine VIC 3517", "Store Location": "Serpentine", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.038511808698, -37.9557957903525, 145.038511808698, -37.9557957903525], "geometry": {"coordinates": [145.038511808698, -37.9557957903525], "type": "Point"}, "id": "45", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Judy", "Status": "Reviewing", "Store Address": "300 Bay Rd, Cheltenham VIC 3192", "Store Location": "Bayroad", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_8522ef62774643dab33ffbe4eb52cdef.bindTooltip(
+    geo_json_df2e19cf34f16c8072882d3d1cc86d61.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -179,7 +179,7 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-    geo_json_8522ef62774643dab33ffbe4eb52cdef.bindPopup(
+    geo_json_df2e19cf34f16c8072882d3d1cc86d61.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     

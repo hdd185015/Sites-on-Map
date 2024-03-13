@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_60039cf4d0fdf51b0f99b73d849767fa {
+                #map_2e0b70e99941f989ba66d2e9b720f300 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -71,14 +71,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_60039cf4d0fdf51b0f99b73d849767fa" ></div>
+            <div class="folium-map" id="map_2e0b70e99941f989ba66d2e9b720f300" ></div>
         
 </body>
 <script>
     
     
-            var map_60039cf4d0fdf51b0f99b73d849767fa = L.map(
-                "map_60039cf4d0fdf51b0f99b73d849767fa",
+            var map_2e0b70e99941f989ba66d2e9b720f300 = L.map(
+                "map_2e0b70e99941f989ba66d2e9b720f300",
                 {
                     center: [-37.3725533473997, 145.1529118945545],
                     crs: L.CRS.EPSG3857,
@@ -87,77 +87,77 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_60039cf4d0fdf51b0f99b73d849767fa);
+            L.control.scale().addTo(map_2e0b70e99941f989ba66d2e9b720f300);
 
             
 
         
     
-            var tile_layer_84114f163f255a7ce519143918e87c39 = L.tileLayer(
+            var tile_layer_e2b965b879ffbd3890de536b93eb6bf9 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_60039cf4d0fdf51b0f99b73d849767fa);
+            ).addTo(map_2e0b70e99941f989ba66d2e9b720f300);
         
     
-            map_60039cf4d0fdf51b0f99b73d849767fa.fitBounds(
+            map_2e0b70e99941f989ba66d2e9b720f300.fitBounds(
                 [[-37.7697641746948, 144.595123111801], [-36.9753425201046, 145.710700677308]],
                 {}
             );
         
     
-        function geo_json_6e93a713f18b4a30862cefdb6433b259_styler(feature) {
+        function geo_json_d0e74b9b84e49255227aeb83146ced37_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.5, "weight": 2};
             }
         }
-        function geo_json_6e93a713f18b4a30862cefdb6433b259_highlighter(feature) {
+        function geo_json_d0e74b9b84e49255227aeb83146ced37_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.75};
             }
         }
-        function geo_json_6e93a713f18b4a30862cefdb6433b259_pointToLayer(feature, latlng) {
+        function geo_json_d0e74b9b84e49255227aeb83146ced37_pointToLayer(feature, latlng) {
             var opts = {"fill": true, "radius": 6};
             
-            let style = geo_json_6e93a713f18b4a30862cefdb6433b259_styler(feature)
+            let style = geo_json_d0e74b9b84e49255227aeb83146ced37_styler(feature)
             Object.assign(opts, style)
             
             return new L.Marker(latlng, opts)
         }
 
-        function geo_json_6e93a713f18b4a30862cefdb6433b259_onEachFeature(feature, layer) {
+        function geo_json_d0e74b9b84e49255227aeb83146ced37_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_6e93a713f18b4a30862cefdb6433b259.resetStyle(e.target);
+                        geo_json_d0e74b9b84e49255227aeb83146ced37.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_6e93a713f18b4a30862cefdb6433b259_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_d0e74b9b84e49255227aeb83146ced37_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
             });
         };
-        var geo_json_6e93a713f18b4a30862cefdb6433b259 = L.geoJson(null, {
-                onEachFeature: geo_json_6e93a713f18b4a30862cefdb6433b259_onEachFeature,
+        var geo_json_d0e74b9b84e49255227aeb83146ced37 = L.geoJson(null, {
+                onEachFeature: geo_json_d0e74b9b84e49255227aeb83146ced37_onEachFeature,
             
-                style: geo_json_6e93a713f18b4a30862cefdb6433b259_styler,
-                pointToLayer: geo_json_6e93a713f18b4a30862cefdb6433b259_pointToLayer
+                style: geo_json_d0e74b9b84e49255227aeb83146ced37_styler,
+                pointToLayer: geo_json_d0e74b9b84e49255227aeb83146ced37_pointToLayer
         });
 
-        function geo_json_6e93a713f18b4a30862cefdb6433b259_add (data) {
-            geo_json_6e93a713f18b4a30862cefdb6433b259
+        function geo_json_d0e74b9b84e49255227aeb83146ced37_add (data) {
+            geo_json_d0e74b9b84e49255227aeb83146ced37
                 .addData(data)
-                .addTo(map_60039cf4d0fdf51b0f99b73d849767fa);
+                .addTo(map_2e0b70e99941f989ba66d2e9b720f300);
         }
-            geo_json_6e93a713f18b4a30862cefdb6433b259_add({"bbox": [144.595123111801, -37.7697641746948, 145.710700677308, -36.9753425201046], "features": [{"bbox": [144.995745697196, -37.699287514365, 144.995745697196, -37.699287514365], "geometry": {"coordinates": [144.995745697196, -37.699287514365], "type": "Point"}, "id": "34", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": "\u4e00\u5e74\u79df\u91d17\u4e07\u591a\uff0c\u5305\u62ec\u65c1\u8fb9\u4fee\u8f66\u5382\u548c\u6d17\u8f66\u5382\uff0c\u6d17\u8f66\u6709\u8d44\u8d28\u4f46\u6ca1\u8fd0\u8425\uff0c\u4fee\u8f66\u5382\u5408\u540c\u5230\u671f\u3002", "SITE STATUS": "Existing BP", "Source": "Raj", "Status": "Reviewing", "Store Address": "97-101 Hughes Parade, Reservoir VIC 3073", "Store Location": "BP Reservoir North", "TOTAL VOLUME PER ANNUM": 1.56, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.595123111801, -37.6057542128187, 144.595123111801, -37.6057542128187], "geometry": {"coordinates": [144.595123111801, -37.6057542128187], "type": "Point"}, "id": "35", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Raj", "Status": "Reviewing", "Store Address": "1486 Diggers Rest-Coimadai Rd, Toolern Vale VIC 3337", "Store Location": "Toolern Vale General Store", "TOTAL VOLUME PER ANNUM": 0.96, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.710700677308, -36.9753425201046, 145.710700677308, -36.9753425201046], "geometry": {"coordinates": [145.710700677308, -36.9753425201046], "type": "Point"}, "id": "36", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Existing Ampol", "Source": "Raj", "Status": "Reviewing", "Store Address": "8289 Maroondah Hwy, Merton VIC 3715", "Store Location": "Merton General Store and Post office", "TOTAL VOLUME PER ANNUM": 1.68, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.646454595743, -37.7697641746948, 145.646454595743, -37.7697641746948], "geometry": {"coordinates": [145.646454595743, -37.7697641746948], "type": "Point"}, "id": "37", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Raj", "Status": "Reviewing", "Store Address": "2837 Warburton Hwy, Wesburn VIC 3799", "Store Location": "Local Fuel Warburton", "TOTAL VOLUME PER ANNUM": 3.6, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_d0e74b9b84e49255227aeb83146ced37_add({"bbox": [144.595123111801, -37.7697641746948, 145.710700677308, -36.9753425201046], "features": [{"bbox": [144.995745697196, -37.699287514365, 144.995745697196, -37.699287514365], "geometry": {"coordinates": [144.995745697196, -37.699287514365], "type": "Point"}, "id": "34", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": "\u4e00\u5e74\u79df\u91d17\u4e07\u591a\uff0c\u5305\u62ec\u65c1\u8fb9\u4fee\u8f66\u5382\u548c\u6d17\u8f66\u5382\uff0c\u6d17\u8f66\u6709\u8d44\u8d28\u4f46\u6ca1\u8fd0\u8425\uff0c\u4fee\u8f66\u5382\u5408\u540c\u5230\u671f\u3002", "SITE STATUS": "Existing BP", "Source": "Raj", "Status": "Reviewing", "Store Address": "97-101 Hughes Parade, Reservoir VIC 3073", "Store Location": "BP Reservoir North", "TOTAL VOLUME PER ANNUM": 1.56, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [144.595123111801, -37.6057542128187, 144.595123111801, -37.6057542128187], "geometry": {"coordinates": [144.595123111801, -37.6057542128187], "type": "Point"}, "id": "35", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Raj", "Status": "Reviewing", "Store Address": "1486 Diggers Rest-Coimadai Rd, Toolern Vale VIC 3337", "Store Location": "Toolern Vale General Store", "TOTAL VOLUME PER ANNUM": 0.96, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.710700677308, -36.9753425201046, 145.710700677308, -36.9753425201046], "geometry": {"coordinates": [145.710700677308, -36.9753425201046], "type": "Point"}, "id": "36", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Existing Ampol", "Source": "Raj", "Status": "Reviewing", "Store Address": "8289 Maroondah Hwy, Merton VIC 3715", "Store Location": "Merton General Store and Post office", "TOTAL VOLUME PER ANNUM": 1.68, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.646454595743, -37.7697641746948, 145.646454595743, -37.7697641746948], "geometry": {"coordinates": [145.646454595743, -37.7697641746948], "type": "Point"}, "id": "37", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Raj", "Status": "Reviewing", "Store Address": "2837 Warburton Hwy, Wesburn VIC 3799", "Store Location": "Local Fuel Warburton", "TOTAL VOLUME PER ANNUM": 3.6, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_6e93a713f18b4a30862cefdb6433b259.bindTooltip(
+    geo_json_d0e74b9b84e49255227aeb83146ced37.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -179,7 +179,7 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-    geo_json_6e93a713f18b4a30862cefdb6433b259.bindPopup(
+    geo_json_d0e74b9b84e49255227aeb83146ced37.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     

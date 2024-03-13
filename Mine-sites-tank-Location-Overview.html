@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_cb29f7efc69a49537231f42eb3d3b869 {
+                #map_f2c897281d58739117402c50c7b1637c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -71,93 +71,93 @@
 <body>
     
     
-            <div class="folium-map" id="map_cb29f7efc69a49537231f42eb3d3b869" ></div>
+            <div class="folium-map" id="map_f2c897281d58739117402c50c7b1637c" ></div>
         
 </body>
 <script>
     
     
-            var map_cb29f7efc69a49537231f42eb3d3b869 = L.map(
-                "map_cb29f7efc69a49537231f42eb3d3b869",
+            var map_f2c897281d58739117402c50c7b1637c = L.map(
+                "map_f2c897281d58739117402c50c7b1637c",
                 {
-                    center: [-27.9523, 117.24619999999999],
+                    center: [-28.25622091194205, 117.4116599402795],
                     crs: L.CRS.EPSG3857,
                     zoom: 10,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_cb29f7efc69a49537231f42eb3d3b869);
+            L.control.scale().addTo(map_f2c897281d58739117402c50c7b1637c);
 
             
 
         
     
-            var tile_layer_c9cea9d0d097305060cb0943ff01a9e7 = L.tileLayer(
+            var tile_layer_6a6c69a8c0617331e6af3a3fde45e8ee = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_cb29f7efc69a49537231f42eb3d3b869);
+            ).addTo(map_f2c897281d58739117402c50c7b1637c);
         
     
-            map_cb29f7efc69a49537231f42eb3d3b869.fitBounds(
-                [[-28.3208, 115.2909], [-27.5838, 119.2015]],
+            map_f2c897281d58739117402c50c7b1637c.fitBounds(
+                [[-28.5354280981939, 115.48584134118], [-27.9770137256902, 119.337478539379]],
                 {}
             );
         
     
-        function geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_styler(feature) {
+        function geo_json_74edeef1787432046bc623c6bd32d8e4_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.5, "weight": 2};
             }
         }
-        function geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_highlighter(feature) {
+        function geo_json_74edeef1787432046bc623c6bd32d8e4_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.75};
             }
         }
-        function geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_pointToLayer(feature, latlng) {
+        function geo_json_74edeef1787432046bc623c6bd32d8e4_pointToLayer(feature, latlng) {
             var opts = {"fill": true, "radius": 6};
             
-            let style = geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_styler(feature)
+            let style = geo_json_74edeef1787432046bc623c6bd32d8e4_styler(feature)
             Object.assign(opts, style)
             
             return new L.Marker(latlng, opts)
         }
 
-        function geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_onEachFeature(feature, layer) {
+        function geo_json_74edeef1787432046bc623c6bd32d8e4_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_17d5aab1f1f8dd15e1d13bcd554cb209.resetStyle(e.target);
+                        geo_json_74edeef1787432046bc623c6bd32d8e4.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_74edeef1787432046bc623c6bd32d8e4_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
             });
         };
-        var geo_json_17d5aab1f1f8dd15e1d13bcd554cb209 = L.geoJson(null, {
-                onEachFeature: geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_onEachFeature,
+        var geo_json_74edeef1787432046bc623c6bd32d8e4 = L.geoJson(null, {
+                onEachFeature: geo_json_74edeef1787432046bc623c6bd32d8e4_onEachFeature,
             
-                style: geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_styler,
-                pointToLayer: geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_pointToLayer
+                style: geo_json_74edeef1787432046bc623c6bd32d8e4_styler,
+                pointToLayer: geo_json_74edeef1787432046bc623c6bd32d8e4_pointToLayer
         });
 
-        function geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_add (data) {
-            geo_json_17d5aab1f1f8dd15e1d13bcd554cb209
+        function geo_json_74edeef1787432046bc623c6bd32d8e4_add (data) {
+            geo_json_74edeef1787432046bc623c6bd32d8e4
                 .addData(data)
-                .addTo(map_cb29f7efc69a49537231f42eb3d3b869);
+                .addTo(map_f2c897281d58739117402c50c7b1637c);
         }
-            geo_json_17d5aab1f1f8dd15e1d13bcd554cb209_add({"bbox": [115.2909, -28.3208, 119.2015, -27.5838], "features": [{"bbox": [115.2909, -28.3208, 115.2909, -28.3208], "geometry": {"coordinates": [115.2909, -28.3208], "type": "Point"}, "id": "68", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Mine", "Status": "Own", "Store Address": null, "Store Location": "Mulewa", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [119.2015, -27.5838, 119.2015, -27.5838], "geometry": {"coordinates": [119.2015, -27.5838], "type": "Point"}, "id": "69", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Mine", "Status": "Own", "Store Address": null, "Store Location": "Sandstone ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_74edeef1787432046bc623c6bd32d8e4_add({"bbox": [115.48584134118, -28.5354280981939, 119.337478539379, -27.9770137256902], "features": [{"bbox": [115.48584134118, -28.5354280981939, 115.48584134118, -28.5354280981939], "geometry": {"coordinates": [115.48584134118, -28.5354280981939], "type": "Point"}, "id": "68", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Mine", "Status": "Own", "Store Address": "coordinates 28 32 08 $ \u0026115 29 09 E", "Store Location": "Mulewa", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [119.337478539379, -27.9770137256902, 119.337478539379, -27.9770137256902], "geometry": {"coordinates": [119.337478539379, -27.9770137256902], "type": "Point"}, "id": "69", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Mine", "Status": "Own", "Store Address": "coordinates 27 58 38 S \u0026119 20 15 E", "Store Location": "Sandstone ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_17d5aab1f1f8dd15e1d13bcd554cb209.bindTooltip(
+    geo_json_74edeef1787432046bc623c6bd32d8e4.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -179,7 +179,7 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-    geo_json_17d5aab1f1f8dd15e1d13bcd554cb209.bindPopup(
+    geo_json_74edeef1787432046bc623c6bd32d8e4.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
