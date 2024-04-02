@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_7b7e1ae510b72836ff54194e80353330 {
+                #map_c8c55066fc35ff82399009fdb9c4c7c5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -71,93 +71,93 @@
 <body>
     
     
-            <div class="folium-map" id="map_7b7e1ae510b72836ff54194e80353330" ></div>
+            <div class="folium-map" id="map_c8c55066fc35ff82399009fdb9c4c7c5" ></div>
         
 </body>
 <script>
     
     
-            var map_7b7e1ae510b72836ff54194e80353330 = L.map(
-                "map_7b7e1ae510b72836ff54194e80353330",
+            var map_c8c55066fc35ff82399009fdb9c4c7c5 = L.map(
+                "map_c8c55066fc35ff82399009fdb9c4c7c5",
                 {
-                    center: [-37.91488395023755, 145.259425460469],
+                    center: [-32.800435951185946, 150.1917501607415],
                     crs: L.CRS.EPSG3857,
                     zoom: 10,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_7b7e1ae510b72836ff54194e80353330);
+            L.control.scale().addTo(map_c8c55066fc35ff82399009fdb9c4c7c5);
 
             
 
         
     
-            var tile_layer_ad36caaf9e688bec6b95854547f84922 = L.tileLayer(
+            var tile_layer_9e65befc3cdbe84067c9e3af92bc8d7d = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_7b7e1ae510b72836ff54194e80353330);
+            ).addTo(map_c8c55066fc35ff82399009fdb9c4c7c5);
         
     
-            map_7b7e1ae510b72836ff54194e80353330.fitBounds(
-                [[-38.0648153390209, 145.01261829697], [-37.7649525614542, 145.506232623968]],
+            map_c8c55066fc35ff82399009fdb9c4c7c5.fitBounds(
+                [[-33.5611760533985, 148.667885652814], [-32.0396958489734, 151.715614668669]],
                 {}
             );
         
     
-        function geo_json_eae3cbe4b72f9b1129b6d211e57b0985_styler(feature) {
+        function geo_json_84c31c2eda3381b8fdd02430578cef71_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.5, "weight": 2};
             }
         }
-        function geo_json_eae3cbe4b72f9b1129b6d211e57b0985_highlighter(feature) {
+        function geo_json_84c31c2eda3381b8fdd02430578cef71_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"fillOpacity": 0.75};
             }
         }
-        function geo_json_eae3cbe4b72f9b1129b6d211e57b0985_pointToLayer(feature, latlng) {
+        function geo_json_84c31c2eda3381b8fdd02430578cef71_pointToLayer(feature, latlng) {
             var opts = {"fill": true, "radius": 6};
             
-            let style = geo_json_eae3cbe4b72f9b1129b6d211e57b0985_styler(feature)
+            let style = geo_json_84c31c2eda3381b8fdd02430578cef71_styler(feature)
             Object.assign(opts, style)
             
             return new L.Marker(latlng, opts)
         }
 
-        function geo_json_eae3cbe4b72f9b1129b6d211e57b0985_onEachFeature(feature, layer) {
+        function geo_json_84c31c2eda3381b8fdd02430578cef71_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_eae3cbe4b72f9b1129b6d211e57b0985.resetStyle(e.target);
+                        geo_json_84c31c2eda3381b8fdd02430578cef71.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_eae3cbe4b72f9b1129b6d211e57b0985_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_84c31c2eda3381b8fdd02430578cef71_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
             });
         };
-        var geo_json_eae3cbe4b72f9b1129b6d211e57b0985 = L.geoJson(null, {
-                onEachFeature: geo_json_eae3cbe4b72f9b1129b6d211e57b0985_onEachFeature,
+        var geo_json_84c31c2eda3381b8fdd02430578cef71 = L.geoJson(null, {
+                onEachFeature: geo_json_84c31c2eda3381b8fdd02430578cef71_onEachFeature,
             
-                style: geo_json_eae3cbe4b72f9b1129b6d211e57b0985_styler,
-                pointToLayer: geo_json_eae3cbe4b72f9b1129b6d211e57b0985_pointToLayer
+                style: geo_json_84c31c2eda3381b8fdd02430578cef71_styler,
+                pointToLayer: geo_json_84c31c2eda3381b8fdd02430578cef71_pointToLayer
         });
 
-        function geo_json_eae3cbe4b72f9b1129b6d211e57b0985_add (data) {
-            geo_json_eae3cbe4b72f9b1129b6d211e57b0985
+        function geo_json_84c31c2eda3381b8fdd02430578cef71_add (data) {
+            geo_json_84c31c2eda3381b8fdd02430578cef71
                 .addData(data)
-                .addTo(map_7b7e1ae510b72836ff54194e80353330);
+                .addTo(map_c8c55066fc35ff82399009fdb9c4c7c5);
         }
-            geo_json_eae3cbe4b72f9b1129b6d211e57b0985_add({"bbox": [145.01261829697, -38.0648153390209, 145.506232623968, -37.7649525614542], "features": [{"bbox": [145.01261829697, -37.8194854176639, 145.01261829697, -37.8194854176639], "geometry": {"coordinates": [145.01261829697, -37.8194854176639], "type": "Point"}, "id": "38", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "645 Bridge Rd, Richmond VIC 3121", "Store Location": "Shell Richmond", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.022963438164, -37.8130981292738, 145.022963438164, -37.8130981292738], "geometry": {"coordinates": [145.022963438164, -37.8130981292738], "type": "Point"}, "id": "39", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "82 Barkers Rd, Hawthorn VIC 3122", "Store Location": "Shell Hawthorn", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.020025168133, -37.7649525614542, 145.020025168133, -37.7649525614542], "geometry": {"coordinates": [145.020025168133, -37.7649525614542], "type": "Point"}, "id": "40", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "265 Darebin Rd, Thornbury VIC 3071", "Store Location": "Shell Thornbury", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.140099459562, -37.9774370847246, 145.140099459562, -37.9774370847246], "geometry": {"coordinates": [145.140099459562, -37.9774370847246], "type": "Point"}, "id": "41", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "625 Lower Dandenong Rd, Dingley Village VIC 3172", "Store Location": "Shell Dingley", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.226826996977, -38.004814086738, 145.226826996977, -38.004814086738], "geometry": {"coordinates": [145.226826996977, -38.004814086738], "type": "Point"}, "id": "42", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "50 S Gippsland Hwy, Dandenong South VIC 3175", "Store Location": "Shell Dandenong", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.239742610471, -38.001523532634, 145.239742610471, -38.001523532634], "geometry": {"coordinates": [145.239742610471, -38.001523532634], "type": "Point"}, "id": "43", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "48 Princes Hwy, Eumemmerring VIC 3177", "Store Location": "Shell Doveton", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.506232623968, -38.0648153390209, 145.506232623968, -38.0648153390209], "geometry": {"coordinates": [145.506232623968, -38.0648153390209], "type": "Point"}, "id": "44", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Wang", "Status": "Discard", "Store Address": "1365 Princes Hwy, Pakenham VIC 3810", "Store Location": "Liberty Pakenham", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_84c31c2eda3381b8fdd02430578cef71_add({"bbox": [148.667885652814, -33.5611760533985, 151.715614668669, -32.0396958489734], "features": [{"bbox": [151.715614668669, -32.9287008535905, 151.715614668669, -32.9287008535905], "geometry": {"coordinates": [151.715614668669, -32.9287008535905], "type": "Point"}, "id": "60", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "business only", "Source": "Charles", "Status": "Reviewing", "Store Address": "105 St James Rd, New Lambton NSW 2305", "Store Location": "BP NEW LAMBTON", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.865329415524, -32.0396958489734, 150.865329415524, -32.0396958489734], "geometry": {"coordinates": [150.865329415524, -32.0396958489734], "type": "Point"}, "id": "61", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "business only", "Source": "Charles", "Status": "Reviewing", "Store Address": "19/30 Kelly St, Scone NSW 2337", "Store Location": "BP SCONE", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.901261366834, -32.2816220046704, 150.901261366834, -32.2816220046704], "geometry": {"coordinates": [150.901261366834, -32.2816220046704], "type": "Point"}, "id": "62", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "business only", "Source": "Charles", "Status": "Reviewing", "Store Address": "139/145 Maitland St, Muswellbrook NSW 2333", "Store Location": "BP MUSWELLBROOK", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.135136368688, -33.4839089629088, 150.135136368688, -33.4839089629088], "geometry": {"coordinates": [150.135136368688, -33.4839089629088], "type": "Point"}, "id": "63", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "land and business", "Source": "Charles", "Status": "Reviewing", "Store Address": "1106 Great Western Hwy, Bowenfels NSW 2790", "Store Location": "BP LITHGOW", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [148.667885652814, -33.5611760533985, 148.667885652814, -33.5611760533985], "geometry": {"coordinates": [148.667885652814, -33.5611760533985], "type": "Point"}, "id": "64", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "land and business", "Source": "Charles", "Status": "Reviewing", "Store Address": "76 Rodd St, Canowindra NSW 2804", "Store Location": "BP CANOWINDRA", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_eae3cbe4b72f9b1129b6d211e57b0985.bindTooltip(
+    geo_json_84c31c2eda3381b8fdd02430578cef71.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -179,7 +179,7 @@
     ,{"className": "foliumtooltip", "sticky": true});
                      
     
-    geo_json_eae3cbe4b72f9b1129b6d211e57b0985.bindPopup(
+    geo_json_84c31c2eda3381b8fdd02430578cef71.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
