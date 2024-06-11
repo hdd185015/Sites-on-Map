@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8c626a6c8badf0ce9ed813ffbaae0215 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8c626a6c8badf0ce9ed813ffbaae0215" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8c626a6c8badf0ce9ed813ffbaae0215 = L.map(
+                "map_8c626a6c8badf0ce9ed813ffbaae0215",
+                {
+                    center: [-37.26824223728105, 144.6227581902105],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_8c626a6c8badf0ce9ed813ffbaae0215);
+
+            
+
+        
+    
+            var tile_layer_1dee9a74d05d59112371a338b342140b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8c626a6c8badf0ce9ed813ffbaae0215);
+        
+    
+            map_8c626a6c8badf0ce9ed813ffbaae0215.fitBounds(
+                [[-38.1327623745621, 143.851012580421], [-36.4037221, 145.3945038]],
+                {}
+            );
+        
+    
+        function geo_json_c39010793c00af336e65512321a6ae86_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_c39010793c00af336e65512321a6ae86_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_c39010793c00af336e65512321a6ae86_pointToLayer(feature, latlng) {
+            var opts = {"fill": true, "radius": 6};
+            
+            let style = geo_json_c39010793c00af336e65512321a6ae86_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.Marker(latlng, opts)
+        }
+
+        function geo_json_c39010793c00af336e65512321a6ae86_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_c39010793c00af336e65512321a6ae86.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_c39010793c00af336e65512321a6ae86_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_c39010793c00af336e65512321a6ae86 = L.geoJson(null, {
+                onEachFeature: geo_json_c39010793c00af336e65512321a6ae86_onEachFeature,
+            
+                style: geo_json_c39010793c00af336e65512321a6ae86_styler,
+                pointToLayer: geo_json_c39010793c00af336e65512321a6ae86_pointToLayer
+        });
+
+        function geo_json_c39010793c00af336e65512321a6ae86_add (data) {
+            geo_json_c39010793c00af336e65512321a6ae86
+                .addData(data)
+                .addTo(map_8c626a6c8badf0ce9ed813ffbaae0215);
+        }
+            geo_json_c39010793c00af336e65512321a6ae86_add({"bbox": [143.851012580421, -38.1327623745621, 145.3945038, -36.4037221], "features": [{"bbox": [145.004321208957, -37.6934019776388, 145.004321208957, -37.6934019776388], "geometry": {"coordinates": [145.004321208957, -37.6934019776388], "type": "Point"}, "id": "70", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Sinopec", "Status": "Reviewing", "Store Address": "50 Mahoneys Rd, Thomastown VIC 3074", "Store Location": "Literty", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [143.851012580421, -37.5426505839238, 143.851012580421, -37.5426505839238], "geometry": {"coordinates": [143.851012580421, -37.5426505839238], "type": "Point"}, "id": "115", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Sinopec", "Status": null, "Store Address": "620 Creswick Rd,Soldiers Hills,VIC", "Store Location": "Ampol Creswick", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.3945038, -36.4037221, 145.3945038, -36.4037221], "geometry": {"coordinates": [145.3945038, -36.4037221], "type": "Point"}, "id": "117", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Sinopec", "Status": null, "Store Address": "7958-7960 Goulburn Valley Hwy,Kialla,VIC", "Store Location": "Ampol Kialla", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [145.124956516014, -38.1327623745621, 145.124956516014, -38.1327623745621], "geometry": {"coordinates": [145.124956516014, -38.1327623745621], "type": "Point"}, "id": "122", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": null, "Source": "Sinopec", "Status": null, "Store Address": "325A Nepean Hwy, Frankston VIC 3199", "Store Location": "Ampol Frankston", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c39010793c00af336e65512321a6ae86.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location"];
+    let aliases = ["Store Location"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_c39010793c00af336e65512321a6ae86.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status", "Source"];
+    let aliases = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status", "Source"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+</script>
+</html>
