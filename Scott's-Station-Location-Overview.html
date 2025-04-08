@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_58e4bd9ce903acc09cabaf9ab90abced {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_58e4bd9ce903acc09cabaf9ab90abced" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_58e4bd9ce903acc09cabaf9ab90abced = L.map(
+                "map_58e4bd9ce903acc09cabaf9ab90abced",
+                {
+                    center: [-30.205600133644452, 151.6837272990375],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_58e4bd9ce903acc09cabaf9ab90abced);
+
+            
+
+        
+    
+            var tile_layer_98601ae1a390a9cf460c10a1b1c7ed9f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_58e4bd9ce903acc09cabaf9ab90abced);
+        
+    
+            map_58e4bd9ce903acc09cabaf9ab90abced.fitBounds(
+                [[-36.0586496062718, 149.961634739616], [-24.3525506610171, 153.405819858459]],
+                {}
+            );
+        
+    
+        function geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_pointToLayer(feature, latlng) {
+            var opts = {"fill": true, "radius": 6};
+            
+            let style = geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.Marker(latlng, opts)
+        }
+
+        function geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23 = L.geoJson(null, {
+                onEachFeature: geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_onEachFeature,
+            
+                style: geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_styler,
+                pointToLayer: geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_pointToLayer
+        });
+
+        function geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_add (data) {
+            geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23
+                .addData(data)
+                .addTo(map_58e4bd9ce903acc09cabaf9ab90abced);
+        }
+            geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23_add({"bbox": [149.961634739616, -36.0586496062718, 153.405819858459, -24.3525506610171], "features": [{"bbox": [153.290670739288, -27.8142368951423, 153.290670739288, -27.8142368951423], "geometry": {"coordinates": [153.290670739288, -27.8142368951423], "type": "Point"}, "id": "46", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Going Concern", "Source": "Joel", "Status": "Reviewing", "Store Address": "62-68 Pimpama Jacobs Well Rd, Pimpama QLD 4209", "Store Location": "Ampol Pimpama", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [151.905538909696, -27.5359646319751, 151.905538909696, -27.5359646319751], "geometry": {"coordinates": [151.905538909696, -27.5359646319751], "type": "Point"}, "id": "47", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Passive (Motivated\nSeller)", "Source": "Joel", "Status": "Reviewing", "Store Address": "392 BOUNDARY ST CNR, Bridge St, Wilsonton QLD 4350", "Store Location": "Shell Wilsonton", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.588681775105, -25.823050040358, 152.588681775105, -25.823050040358], "geometry": {"coordinates": [152.588681775105, -25.823050040358], "type": "Point"}, "id": "48", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Closed Service Station,3.Caravan Park \u0026 Grocer - Lease or GoingConcern", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Bauple", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.338811239585, -25.0675340115014, 152.338811239585, -25.0675340115014], "geometry": {"coordinates": [152.338811239585, -25.0675340115014], "type": "Point"}, "id": "49", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "NewDevelopment Site-Lease", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Goodwood Rd. Bundaberg, QLD", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [153.055878057092, -27.072651641405, 153.055878057092, -27.072651641405], "geometry": {"coordinates": [153.055878057092, -27.072651641405], "type": "Point"}, "id": "50", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "New5.Development Site-Lease", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Bribie lsland Rd. Caboolture, QLD", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [153.405819858459, -28.7287234296453, 153.405819858459, -28.7287234296453], "geometry": {"coordinates": [153.405819858459, -28.7287234296453], "type": "Point"}, "id": "51", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "(developmentpotential)-Passive/Option to take ove!Servo Business", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Clunes Auto Centre, NSW ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [151.900050709586, -27.5570086697628, 151.900050709586, -27.5570086697628], "geometry": {"coordinates": [151.900050709586, -27.5570086697628], "type": "Point"}, "id": "52", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "NewDevelopment Site-Lease", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Hursley Rd. Glenvale, QLD", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [151.557311725576, -24.3525506610171, 151.557311725576, -24.3525506610171], "geometry": {"coordinates": [151.557311725576, -24.3525506610171], "type": "Point"}, "id": "53", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "New TruckStop Development Site - For Sale (as is)", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "Bruce Hwy. Miriam Vale, QLD ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.139443264189, -36.0586496062718, 150.139443264189, -36.0586496062718], "geometry": {"coordinates": [150.139443264189, -36.0586496062718], "type": "Point"}, "id": "54", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Development Site-Passive", "Source": "Joel", "Status": "Reviewing", "Store Address": "36 Evans Rd, Tuross Head NSW 2537", "Store Location": "Ultra Petroleum Tuross Head, NSW", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.168597147685, -24.9288670368955, 152.168597147685, -24.9288670368955], "geometry": {"coordinates": [152.168597147685, -24.9288670368955], "type": "Point"}, "id": "55", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Servo \u002610.\nGrocer -Going Concern", "Source": "Joel", "Status": "Reviewing", "Store Address": "unknown", "Store Location": "South Kolan (Bundaberg), QLD ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [151.806750977908, -27.4990173249238, 151.806750977908, -27.4990173249238], "geometry": {"coordinates": [151.806750977908, -27.4990173249238], "type": "Point"}, "id": "56", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Redevelopment Site -\nLease/Ground Lease", "Source": "Joel", "Status": "Reviewing", "Store Address": "11301 Warrego Hwy, Kingsthorpe QLD 4400", "Store Location": "Zimms Corner, QLD", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [152.795511740728, -31.6444244185611, 152.795511740728, -31.6444244185611], "geometry": {"coordinates": [152.795511740728, -31.6444244185611], "type": "Point"}, "id": "57", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Going Concern", "Source": "Joel", "Status": "Reviewing", "Store Address": "2 Kew Rd, Laurieton NSW 2443", "Store Location": "Liberty Bonny Hills,NSW", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [150.877592394984, -34.4257801768407, 150.877592394984, -34.4257801768407], "geometry": {"coordinates": [150.877592394984, -34.4257801768407], "type": "Point"}, "id": "58", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Going\nConcern +two houses", "Source": "Joel", "Status": "Reviewing", "Store Address": "394 Crown St, Wollongong NSW 2500", "Store Location": "Metro West Wollongong, NSW ", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}, {"bbox": [149.961634739616, -26.1249577262215, 149.961634739616, -26.1249577262215], "geometry": {"coordinates": [149.961634739616, -26.1249577262215], "type": "Point"}, "id": "59", "properties": {"FUTURE DEVELOPMENTS": null, "RENT PER ANNUM": null, "SITE STATUS": "Going Concern +\nhouse/accom.included", "Source": "Joel", "Status": "Reviewing", "Store Address": "Zupp Rd, Wandoan QLD 4419", "Store Location": "BP Wandoan,QLD", "TOTAL VOLUME PER ANNUM": null, "Total Tank Capacities on Site": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location"];
+    let aliases = ["Store Location"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_fe79b7a0bfa6bc05c2c96b04c7848f23.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status", "Source"];
+    let aliases = ["Store Location", "Store Address", "TOTAL VOLUME PER ANNUM", "Total Tank Capacities on Site", "SITE STATUS", "FUTURE DEVELOPMENTS", "RENT PER ANNUM", "Status", "Source"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+</script>
+</html>
